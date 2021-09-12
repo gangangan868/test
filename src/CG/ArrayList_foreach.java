@@ -20,7 +20,7 @@ public class ArrayList_foreach {
         collection.add("貂蝉");
         collection.add("西施");
         collection.add("杨贵妃");
-        for (Object obj : collection) {
+        /*for (Object obj : collection) {
             System.out.println(obj);
         }
 
@@ -28,6 +28,17 @@ public class ArrayList_foreach {
             System.out.println(it.next());
         }
         //底层foreach实现
-        for (Iterator it=collection.iterator();it.hasNext();System.out.println(it.next()));
+        for (Iterator it=collection.iterator();it.hasNext();System.out.println(it.next()));*/
+
+        Collection c2=new ArrayList();
+        for (Object obj :collection) {
+            c2.add(obj);
+            if(obj.equals("貂蝉")){
+                c2.add("吕布");
+            }
+        }
+        collection.clear();
+        for (Iterator it=c2.iterator();it.hasNext();collection.add(it.next()));
+        System.out.println(collection.toArray()[0]);
     }
 }
