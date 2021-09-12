@@ -8,6 +8,10 @@ import java.util.Iterator;
 *   boolean hasnext()
 *   Object next()
 * }
+* 迭代器遍历底层原理
+*   hasnext(){
+*        return this.cursor != ArrayList.this.size;
+*       }
 * */
 public class collectionDome01 {
     public static void main(String[] args) {
